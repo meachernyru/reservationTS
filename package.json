@@ -1,0 +1,22 @@
+{
+  "name": "medgid",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "w": "pnpm --filter @medgid/webapp",
+    "b": "pnpm --filter @medgid/backend",
+    "dev": "pnpm -r --parallel dev",
+    "types": "pnpm -r --parallel types",
+    "prettify": "pnpm -r --parallel prettify",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.0.2",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  }
+}

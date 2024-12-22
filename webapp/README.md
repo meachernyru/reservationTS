@@ -1,50 +1,15 @@
-# React + TypeScript + Vite
+15. Добавление tRPC во фронтенд
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+cd webapp && pnpm i @trpc/client @trpc/react-query @tanstack/react-query — установить tRPC и его зависимости для клиента
 
-Currently, two official plugins are available:
+"@tanstack/react-query": "^4.32.6",
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Настроить монорепу с помощью pnpm
+-- Файл pnpm-workspace.yaml - создаем рабочие пространства
+-- package.json в корень проекта монорепы
+-- зависмость во фронтовский package.json -> "@medgid/backend": "workspace:\*",
+-- вызов pnpm i для установки зависимостей
+-- настройка lib/trpc.tsx на фронте
+-- webapp/src/App.tsx
+-- cors for backend and @types/cors for DevDepends dor backend
+-- add cors to express use
