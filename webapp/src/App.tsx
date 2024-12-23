@@ -12,8 +12,8 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path={getAllServices()} element={<AllServicesPage />} />
-          <Route path={getServiceRoute({ servId: ':servId' })} element={<ServicePage />} />
-          {/* <Route path={"serv/:servId"} element={<ServicePage />} /> */}
+          {/* <Route path={getServiceRoute({ servId: ':servId' })} element={<ServicePage />} /> */}
+          <Route path={getServiceRoute(':servId')} element={<ServicePage />} />
         </Routes>
       </BrowserRouter>
     </TrpcProvider>

@@ -19,7 +19,7 @@ export const AllServicesPage = () => {
       {data?.medservices.map((serviceItem) => (
         <div key={serviceItem.id}>
           <h2>
-            <Link to={getServiceRoute({ servId: serviceItem.id })}>{serviceItem.name}</Link>
+            <Link to={getServiceRoute(serviceItem.id)}>{serviceItem.name}</Link>
           </h2>
           <p>{serviceItem.price}</p>
         </div>
